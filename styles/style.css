@@ -17,4 +17,211 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--inter);
+  font-weight: var(--weight-normal);
+  background-color: var(--backgorund-color);
+  color: var(--accent-color);
+}
+
+.container {
+  max-width: 696px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+.header {
+  background-color: antiquewhite;
+  font-family: var(--PressStart2P);
+  margin-block-start: 100px;
+  margin-block-end: 103px;
+  padding-block-start: 9.5%;
+  padding-block-end: 14px;
+  min-height: 323px;
+  max-height: 364px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  border: 2px solid var(--accent-color);
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 20px;
+}
+
+.header__title {
+  font-size: 49px;
+  margin-block-end: 20px;
+}
+
+.margin-block-end {
+  margin-block-end: var(--margin-25px);
+}
+
+.header__subtitle {
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+.theme-menu__button {
+  font-size: 14px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+}
+.theme-menu__button:disabled:before {
+  content: "▶";
+  position: absolute;
+  left: -20px;
+  animation-name: left-right-moving;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+/*.......................................................................................................................*/
+
+.cards__card-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.cards__img {
+  width: 100%;
+  background-size: cover;
+}
+
+.card {
+  border: 2px solid var(--accent-color);
+}
+
+.cards__elements-container {
+  padding: 22px 25px 25px 25px;
+}
+
+.cards__subtitle {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 4px 10px 6px 10px;
+}
+
+.cards__paragraph {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 18px;
+  padding-inline-end: 1px;
+}
+
+.cards__button {
+  background-color: transparent;
+  font-family: var(--PressStart2P);
+  font-size: 14px;
+  padding: 10px 36px;
+  border: 2px solid var(--accent-color);
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: none;
+}
+
+.cards__container-of-interactive-elements {
+  display: flex;
+  justify-content: end;
+  gap: 4px;
+  align-items: end;
+}
+
+.cards__paragraph_padding_small {
+  padding-inline-end: 5px;
+}
+
+.cards__img-container {
+  position: relative;
+}
+
+.decorative-element {
+  position: absolute;
+  font-size: 14px;
+  font-family: var(--PressStart2P);
+  color: transparent;
+  right: 11px;
+  top: 25px;
+  text-shadow: 1px 0 #ffffff;
+}
+
+@supports ((text-stroke: 1px #ffffff) or (-webkit-text-stroke: 1px #ffffff)) {
+  .decorative-element {
+    text-stroke: 1px #ffffff;
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: none;
+  }
+}
+
+.theme-menu__button:after{
+  content: '';
+  display: block;
+  width: 0%;
+  height: 3px;
+  margin-top: 3px;
+  transition: width 0.3s;
+}
+
+.theme-menu__button:hover:enabled::after{
+  width: 100%;
+  background-color: var(--accent-color);
+  opacity: var(--opacity);
+}
+
+.theme-menu__button:hover,
+.theme-menu__button:disabled{
+  opacity: var(--opacity);
+}
+
+.theme-menu__button:focus{
+  outline: none;
+  opacity: var(--opacity);
+}
+
+.theme-menu__item{
+  position: relative;
+}
+
+@keyframes left-right-moving{
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: -24px;
+  }
+}
+
+/*.......................................................................................................................*/
+@media (min-width: 375px) {
+  .header__title {
+    font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  }
+}
+
+@media (min-width: 1440px) {
+  .cards__paragraph_padding_small {
+    padding-inline-end: 0;
+  }
+
+  .cards__container-of-interactive-elements {
+    padding-block-start: 1px;
+  }
+
+  .cards__elements-container {
+    padding-inline-end: 20.5px;
+    padding-block-start: 27px;
+  }
 }

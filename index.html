@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
     <title>Закрывающий тег</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
@@ -10,10 +11,13 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
+    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
-    <header class="header">
+    <header class="header container">
+      <h1 class="header__title">&lt/HTML&gt</h1>
+      <h2 class="header__subtitle margin-block-end">закрывающий тег</h2>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -40,7 +44,400 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section class="cards container">
+        <ul class="cards__card-list">
+          <li class="cards__card-list-item">
+            <article class="card">
+              <h3 class="cards__subtitle">
+                Фритрек и нулевой спринт: Подготовка к работе
+              </h3>
+              <div class="cards__img-container">
+                <span class="decorative-element">&lt/HTML&gt</span>
+                <picture>
+                  <source
+                    srcset="./images/card-image-stardant.jpg"
+                    media="(max-width:375px)"
+                  />
+                  <img
+                    src="./images/card-image-stardant-1440px.jpg"
+                    alt="изображение машины в стандартом цвете"
+                    class="cards__img"
+                  />
+                </picture>
+              </div>
+              <div class="cards__elements-container">
+                <p class="cards__paragraph margin-block-end">
+                  Это было самое начало пути. На этом этапе важно было
+                  проникнуться основами и настроиться на учёбу. И, возможно,
+                  подумать, как новые знания могут повлиять на ваше будущее.
+                </p>
+                <p class="cards__paragraph margin-block-end">
+                  Место для ваших воспоминаний о начале обучения.
+                </p>
+                <div class="cards__container-of-interactive-elements">
+                  <button class="card__icon-button">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="like-icon"
+                      width="27"
+                      height="24"
+                      fill="none"
+                    >
+                      <path
+                        fill="#000"
+                        d="M6 0H3v3h3V0ZM9 0H6v3h3V0ZM3 3H0v3h3V3ZM3 6H0v3h3V6ZM3 9H0v3h3V9ZM12 0H9v3h3V0ZM6 12H3v3h3v-3ZM9 15H6v3h3v-3ZM12 18H9v3h3v-3ZM21 0h3v3h-3V0ZM18 0h3v3h-3V0ZM24 3h3v3h-3V3ZM24 6h3v3h-3V6ZM24 9h3v3h-3V9ZM15 0h3v3h-3V0ZM21 12h3v3h-3v-3ZM18 15h3v3h-3v-3ZM15 18h3v3h-3v-3ZM15 3h-3v3h3V3ZM15 21h-3v3h3v-3Z"
+                      />
+                    </svg>
+                  </button>
+                  <button class="cards__button card__like-button">
+                    <span class="button__text">Like</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="cards__card-list-item">
+            <article class="card">
+              <h3 class="cards__subtitle">1 спринт: Я — чистый лист</h3>
+              <picture>
+                <source
+                  srcset="./images/card-image-dark.jpg"
+                  media="(max-width:375px)"
+                />
+                <img
+                  src="./images/card-image-dark-1440px.jpg"
+                  alt="изображение машины в темном цвете"
+                  class="cards__img"
+                />
+              </picture>
+              <div class="cards__elements-container">
+                <p class="cards__paragraph margin-block-end">
+                  На первых этапах мы работали со страхами и сомнениями, которые
+                  часто испытывают новички. Один из них — страх перед чистым
+                  листом. Это, конечно же, намного сложнее, чем боязнь куска
+                  бумаги. Часто за этим ощущением скрываются более глубокие
+                  вопросы: с чего начать? а вдруг будет слишком сложно? что,
+                  если я не справлюсь?
+                </p>
+                <p class="cards__paragraph margin-block-end">
+                  Место для ваших воспоминаний о начале первого спринта.
+                </p>
+                <div class="cards__container-of-interactive-elements">
+                  <button class="card__icon-button">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="like-icon"
+                      width="27"
+                      height="24"
+                      fill="none"
+                    >
+                      <path
+                        fill="#000"
+                        d="M6 0H3v3h3V0ZM9 0H6v3h3V0ZM3 3H0v3h3V3ZM3 6H0v3h3V6ZM3 9H0v3h3V9ZM12 0H9v3h3V0ZM6 12H3v3h3v-3ZM9 15H6v3h3v-3ZM12 18H9v3h3v-3ZM21 0h3v3h-3V0ZM18 0h3v3h-3V0ZM24 3h3v3h-3V3ZM24 6h3v3h-3V6ZM24 9h3v3h-3V9ZM15 0h3v3h-3V0ZM21 12h3v3h-3v-3ZM18 15h3v3h-3v-3ZM15 18h3v3h-3v-3ZM15 3h-3v3h3V3ZM15 21h-3v3h3v-3Z"
+                      />
+                    </svg>
+                  </button>
+                  <button class="cards__button card__like-button">
+                    <span class="button__text">Like</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="cards__card-list-item">
+            <article class="card">
+              <h3 class="cards__subtitle">1 спринт: А если не получится?</h3>
+              <picture>
+                <source
+                  srcset="./images/card-image-purple.jpg"
+                  media="(max-width:375px)"
+                />
+                <img
+                  src="./images/card-image-purple-1440px.jpg"
+                  alt="изображение машины в фиолетовом"
+                  class="cards__img"
+                />
+              </picture>
+              <div class="cards__elements-container">
+                <p class="cards__paragraph margin-block-end">
+                  Первый проект — позади! Но это всё ещё самое начало пути.
+                  Радость могла быстро померкнуть и смениться ожиданием провала.
+                  Или вы, наоборот, могли вдохновиться успехами и поверить в
+                  себя.
+                </p>
+                <p class="cards__paragraph margin-block-end">
+                  Место для ваших воспоминаний об окончании первого спринта.
+                </p>
+                <div class="cards__container-of-interactive-elements">
+                  <button class="card__icon-button">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="like-icon"
+                      width="27"
+                      height="24"
+                      fill="none"
+                    >
+                      <path
+                        fill="#000"
+                        d="M6 0H3v3h3V0ZM9 0H6v3h3V0ZM3 3H0v3h3V3ZM3 6H0v3h3V6ZM3 9H0v3h3V9ZM12 0H9v3h3V0ZM6 12H3v3h3v-3ZM9 15H6v3h3v-3ZM12 18H9v3h3v-3ZM21 0h3v3h-3V0ZM18 0h3v3h-3V0ZM24 3h3v3h-3V3ZM24 6h3v3h-3V6ZM24 9h3v3h-3V9ZM15 0h3v3h-3V0ZM21 12h3v3h-3v-3ZM18 15h3v3h-3v-3ZM15 18h3v3h-3v-3ZM15 3h-3v3h3V3ZM15 21h-3v3h3v-3Z"
+                      />
+                    </svg>
+                  </button>
+                  <button class="cards__button card__like-button">
+                    <span class="button__text">Like</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="cards__card-list-item">
+            <article class="card">
+              <h3 class="cards__subtitle">2 спринт: Погоня за идеалом</h3>
+              <picture>
+                <source
+                  srcset="./images/card-image-pink.jpg"
+                  media="(max-width:375px)"
+                />
+                <img
+                  src="./images/card-image-pink-1440px.jpg"
+                  alt="изображение машины в розовом"
+                  class="cards__img"
+                />
+              </picture>
+              <div class="cards__elements-container">
+                <p class="cards__paragraph margin-block-end">
+                  На этом этапе вы уже достаточно разбирались в основах вёрстки,
+                  чтобы понять, как много ещё впереди. Вы могли попытаться
+                  погнаться за идеалом и понять, что он недостижим. А, может, вы
+                  вовсе и не подвержены перфекционизму и вместо того, чтобы
+                  сделать идеально, старались просто сделать.
+                </p>
+                <p class="cards__paragraph margin-block-end">
+                  Место для ваших воспоминаний о начале второго спринта.
+                </p>
+                <div class="cards__container-of-interactive-elements">
+                  <button class="card__icon-button">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="like-icon"
+                      width="27"
+                      height="24"
+                      fill="none"
+                    >
+                      <path
+                        fill="#000"
+                        d="M6 0H3v3h3V0ZM9 0H6v3h3V0ZM3 3H0v3h3V3ZM3 6H0v3h3V6ZM3 9H0v3h3V9ZM12 0H9v3h3V0ZM6 12H3v3h3v-3ZM9 15H6v3h3v-3ZM12 18H9v3h3v-3ZM21 0h3v3h-3V0ZM18 0h3v3h-3V0ZM24 3h3v3h-3V3ZM24 6h3v3h-3V6ZM24 9h3v3h-3V9ZM15 0h3v3h-3V0ZM21 12h3v3h-3v-3ZM18 15h3v3h-3v-3ZM15 18h3v3h-3v-3ZM15 3h-3v3h3V3ZM15 21h-3v3h3v-3Z"
+                      />
+                    </svg>
+                  </button>
+                  <button class="cards__button card__like-button">
+                    <span class="button__text">Like</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="cards__card-list-item">
+            <article class="card">
+              <h3 class="cards__subtitle">2 спринт: О тех, кто рядом</h3>
+              <picture>
+                <source
+                  srcset="./images/card-image-green.jpg"
+                  media="(max-width:375px)"
+                />
+                <img
+                  src="./images/card-image-green-1440px.jpg"
+                  alt="изображение машины в зеленом"
+                  class="cards__img"
+                />
+              </picture>
+              <div class="cards__elements-container">
+                <p class="cards__paragraph margin-block-end">
+                  Всё это время вы были не одиноки (хотя, возможно, иногда и
+                  чувствовали, что одни против целого мира). Вас окружали
+                  одногруппники, команда сопровождения и просто близкие люди,
+                  которым можно пожаловаться, если очередной макет просто так не
+                  поддавался. Осваивать что-то новое легче, когда рядом есть
+                  единомышленники, не правда ли?
+                </p>
+                <p class="cards__paragraph margin-block-end">
+                  Место для ваших воспоминаний об окончании второго спринта.
+                </p>
+                <div class="cards__container-of-interactive-elements">
+                  <button class="card__icon-button">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="like-icon"
+                      width="27"
+                      height="24"
+                      fill="none"
+                    >
+                      <path
+                        fill="#000"
+                        d="M6 0H3v3h3V0ZM9 0H6v3h3V0ZM3 3H0v3h3V3ZM3 6H0v3h3V6ZM3 9H0v3h3V9ZM12 0H9v3h3V0ZM6 12H3v3h3v-3ZM9 15H6v3h3v-3ZM12 18H9v3h3v-3ZM21 0h3v3h-3V0ZM18 0h3v3h-3V0ZM24 3h3v3h-3V3ZM24 6h3v3h-3V6ZM24 9h3v3h-3V9ZM15 0h3v3h-3V0ZM21 12h3v3h-3v-3ZM18 15h3v3h-3v-3ZM15 18h3v3h-3v-3ZM15 3h-3v3h3V3ZM15 21h-3v3h3v-3Z"
+                      />
+                    </svg>
+                  </button>
+                  <button class="cards__button card__like-button">
+                    <span class="button__text">Like</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="cards__card-list-item">
+            <article class="card">
+              <h3 class="cards__subtitle">3 спринт: Обходные стратегии</h3>
+              <picture>
+                <source
+                  srcset="./images/card-image-gray.jpg"
+                  media="(max-width:375px)"
+                />
+                <img
+                  src="./images/card-image-gray-1440px.jpg"
+                  alt="изображение машины в сером"
+                  class="cards__img"
+                />
+              </picture>
+              <div class="cards__elements-container">
+                <p class="cards__paragraph margin-block-end">
+                  На этом курсе вы постоянно решали разные задачи. В какой-то
+                  момент вам могло показаться, что решения просто иссякли.
+                  Значит, пришло время посмотреть на задачу под другим углом.
+                </p>
+                <p class="cards__paragraph margin-block-end">
+                  Место для ваших воспоминаний о начале третьего спринта.
+                </p>
+                <div class="cards__container-of-interactive-elements">
+                  <button class="card__icon-button">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="like-icon"
+                      width="27"
+                      height="24"
+                      fill="none"
+                    >
+                      <path
+                        fill="#000"
+                        d="M6 0H3v3h3V0ZM9 0H6v3h3V0ZM3 3H0v3h3V3ZM3 6H0v3h3V6ZM3 9H0v3h3V9ZM12 0H9v3h3V0ZM6 12H3v3h3v-3ZM9 15H6v3h3v-3ZM12 18H9v3h3v-3ZM21 0h3v3h-3V0ZM18 0h3v3h-3V0ZM24 3h3v3h-3V3ZM24 6h3v3h-3V6ZM24 9h3v3h-3V9ZM15 0h3v3h-3V0ZM21 12h3v3h-3v-3ZM18 15h3v3h-3v-3ZM15 18h3v3h-3v-3ZM15 3h-3v3h3V3ZM15 21h-3v3h3v-3Z"
+                      />
+                    </svg>
+                  </button>
+                  <button class="cards__button card__like-button">
+                    <span class="button__text">Like</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="cards__card-list-item">
+            <article class="card">
+              <h3 class="cards__subtitle">3 спринт: Когда опускаются руки</h3>
+              <picture>
+                <source
+                  srcset="./images/card-image-blur.jpg"
+                  media="(max-width:375px)"
+                />
+                <img
+                  src="./images/card-image-blur-1440px.jpg"
+                  alt="изображение машины в размытом состоянии"
+                  class="cards__img"
+                />
+              </picture>
+              <div class="cards__elements-container">
+                <p
+                  class="cards__paragraph margin-block-end cards__paragraph_padding_small"
+                >
+                  Во время учёбы часто возникает чувство, когда не знаешь, за
+                  что хвататься. Вроде и проектную пора сдавать, и задачи
+                  хочется порешать, и в теории получше разобраться, и жизнь не
+                  забыть пожить. В такие моменты очень нужна концентрация.
+                  Вспомните, откуда вы её черпали.
+                </p>
+                <p class="cards__paragraph margin-block-end">
+                  Место для ваших воспоминаний об окончании третьего спринта.
+                </p>
+                <div class="cards__container-of-interactive-elements">
+                  <button class="card__icon-button">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="like-icon"
+                      width="27"
+                      height="24"
+                      fill="none"
+                    >
+                      <path
+                        fill="#000"
+                        d="M6 0H3v3h3V0ZM9 0H6v3h3V0ZM3 3H0v3h3V3ZM3 6H0v3h3V6ZM3 9H0v3h3V9ZM12 0H9v3h3V0ZM6 12H3v3h3v-3ZM9 15H6v3h3v-3ZM12 18H9v3h3v-3ZM21 0h3v3h-3V0ZM18 0h3v3h-3V0ZM24 3h3v3h-3V3ZM24 6h3v3h-3V6ZM24 9h3v3h-3V9ZM15 0h3v3h-3V0ZM21 12h3v3h-3v-3ZM18 15h3v3h-3v-3ZM15 18h3v3h-3v-3ZM15 3h-3v3h3V3ZM15 21h-3v3h3v-3Z"
+                      />
+                    </svg>
+                  </button>
+                  <button class="cards__button card__like-button">
+                    <span class="button__text">Like</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="cards__card-list-item">
+            <article class="card">
+              <h3 class="cards__subtitle">«Сейчас я здесь»</h3>
+              <picture>
+                <source
+                  srcset="./images/card-image-red.jpg"
+                  media="(max-width:375px)"
+                />
+                <img
+                  src="./images/card-image-red-1440px.jpg"
+                  alt="изображение машины в красном цвете"
+                  class="cards__img"
+                />
+              </picture>
+              <div class="cards__elements-container">
+                <p class="cards__paragraph margin-block-end">
+                  Сейчас вы уже очень много знаете о вёрстке. Но это только
+                  начало. Во-первых, впереди ещё много материала про
+                  «красотищу». Во-вторых, с окончанием курса учёба не
+                  заканчивается. Вёрстка — это целый мир. И этот мир постоянно
+                  меняется. Познать его полностью не получится, но это тот
+                  случай, когда важен сам процесс познания. Ведь часто путь — и
+                  есть результат.
+                </p>
+                <p class="cards__paragraph margin-block-end">
+                  Место, чтобы остановиться, подумать и написать, что вы
+                  чувствуете в этой точке пути.
+                </p>
+                <div class="cards__container-of-interactive-elements">
+                  <button class="card__icon-button">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="like-icon"
+                      width="27"
+                      height="24"
+                      fill="none"
+                    >
+                      <path
+                        fill="#000"
+                        d="M6 0H3v3h3V0ZM9 0H6v3h3V0ZM3 3H0v3h3V3ZM3 6H0v3h3V6ZM3 9H0v3h3V9ZM12 0H9v3h3V0ZM6 12H3v3h3v-3ZM9 15H6v3h3v-3ZM12 18H9v3h3v-3ZM21 0h3v3h-3V0ZM18 0h3v3h-3V0ZM24 3h3v3h-3V3ZM24 6h3v3h-3V6ZM24 9h3v3h-3V9ZM15 0h3v3h-3V0ZM21 12h3v3h-3v-3ZM18 15h3v3h-3v-3ZM15 18h3v3h-3v-3ZM15 3h-3v3h3V3ZM15 21h-3v3h3v-3Z"
+                      />
+                    </svg>
+                  </button>
+                  <button class="cards__button card__like-button">
+                    <span class="button__text">Like</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <div>
+          <svg>
+            <use href="./svg/diskette.svg#diskette"></use>
+          </svg>
+        </div>
+      </section>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
