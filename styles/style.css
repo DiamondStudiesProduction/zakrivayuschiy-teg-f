@@ -86,6 +86,34 @@
 }
 /*.......................................................................................................................*/
 
+.img-dark{
+  filter: grayscale(80%);
+}
+
+.img-saturate{
+  filter: saturate(400%);
+}
+
+.img-pink{
+  filter: hue-rotate(30deg);
+}
+
+.img-green{
+  filter: invert(1) contrast(0.5);
+}
+
+.img-brown{
+  filter: sepia(1);
+}
+
+.img-blur{
+  filter: blur(10px);
+}
+
+.img-red{
+  filter: hue-rotate(100deg) blur(1px) contrast(0.5);
+}
+
 .cards__card-list {
   list-style-type: none;
   display: flex;
@@ -108,7 +136,7 @@
 
 .cards__subtitle {
   font-family: inherit;
-  font-weight: 700;
+  font-weight: var(--weight-bold);
   font-size: 18px;
   padding: 4px 10px 6px 10px;
 }
@@ -152,16 +180,19 @@
   position: absolute;
   font-size: 14px;
   font-family: var(--PressStart2P);
-  color: transparent;
+  color: var(--accent-color);
   right: 11px;
   top: 25px;
-  text-shadow: 1px 0 #ffffff;
+  text-shadow: 1px 0 var(--backgorund-color);
+  opacity: var(--opacity);
+  z-index: 1;
+  mix-blend-mode: hard-light;
 }
 
-@supports ((text-stroke: 1px #ffffff) or (-webkit-text-stroke: 1px #ffffff)) {
+@supports ((text-stroke: 1px var(--backgorund-color)) or (-webkit-text-stroke: 1px var(--backgorund-color))) {
   .decorative-element {
-    text-stroke: 1px #ffffff;
-    -webkit-text-stroke: 1px #ffffff;
+    text-stroke: 1px var(--backgorund-color);
+    -webkit-text-stroke: 0.5px var(--backgorund-color);
     text-shadow: none;
   }
 }
@@ -195,6 +226,25 @@
   position: relative;
 }
 
+.cards__floppy-text{
+  font-family: var(--PressStart2P);
+  font-size: 14px;
+}
+
+.cards__floppy-container{
+  border: 2px solid var(--accent-color);
+  margin: 49px auto 0 auto;
+  padding: 15px 18.7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 312px;
+}
+
+.cards__floppy{
+  width: 37px;
+  height: 37px;
+}
 @keyframes left-right-moving{
   0% {
     left: -20px;
@@ -224,4 +274,15 @@
     padding-inline-end: 20.5px;
     padding-block-start: 27px;
   }
+
+  .cards__floppy-container{
+    flex-direction: row;
+    max-width: 335px;
+  }
+
+  .cards__floppy {
+    width: 28px;
+    height: 28px;
+}
+
 }
