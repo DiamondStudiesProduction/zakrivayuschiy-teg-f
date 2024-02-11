@@ -8,4 +8,7 @@
   --accent-color: black;
   --margin-25px: 25px;
   --opacity: 0.6;
+  --transition-time: 0.3s;
+  --difference-colors: white;
+  --accent-color-heart:#FF0000;
 }
