@@ -33,10 +33,10 @@
   background-color: antiquewhite;
   font-family: var(--PressStart2P);
   margin-block-start: 100px;
-  margin-block-end: 103px;
+  margin-block-end: 102px;
   padding-block-start: 9.5%;
   padding-block-end: 14px;
-  min-height: 323px;
+  min-height: 325px;
   max-height: 364px;
   display: flex;
   flex-direction: column;
@@ -48,22 +48,21 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 7px;
   padding-left: 20px;
 }
 
 .header__title {
-  font-size: 49px;
   margin-block-end: 20px;
+  font-weight: var(--weight-normal);
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
-.margin-block-end {
-  margin-block-end: var(--margin-25px);
-}
 
 .header__subtitle {
   margin-bottom: 25px;
   text-transform: uppercase;
+  font-weight: var(--weight-normal);
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
@@ -73,6 +72,7 @@
   background-color: transparent;
   border: none;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .theme-menu__button:disabled:before {
   content: "▶";
@@ -131,29 +131,38 @@
 }
 
 .cards__elements-container {
-  padding: 22px 25px 25px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding: 25px 25px 24.5px 25px;
 }
 
 .cards__subtitle {
   font-family: inherit;
   font-weight: var(--weight-bold);
   font-size: 18px;
-  padding: 4px 10px 6px 10px;
+  line-height: 21.78px;
+  padding: 3.5px 10px 5.5px 10px;
 }
 
 .cards__paragraph {
   font-family: inherit;
   font-weight: inherit;
   font-size: 18px;
-  padding-inline-end: 1px;
+  line-height: 21px;
+  max-width: 320px;
 }
 
 .card__like-button {
+  padding: 10px 36px;
+}
+
+.button-element{
   position: relative;
   background-color: transparent;
   font-family: var(--PressStart2P);
   font-size: 14px;
-  padding: 10px 36px;
+  cursor: pointer;
   border: 2px solid var(--accent-color);
 }
 
@@ -161,7 +170,7 @@
   background-color: transparent;
   border: none;
   height: 34px;
-  padding-top: 6px;
+  cursor: pointer;
 }
 
 .card__icon-button:focus-visible {
@@ -175,9 +184,8 @@
 
 .cards__container-of-interactive-elements {
   display: flex;
+  padding: 0 25px 25px 25px;
   justify-content: end;
-  gap: 4px;
-  align-items: center;
 }
 
 .cards__paragraph_padding_small {
@@ -186,6 +194,12 @@
 
 .cards__img-container {
   position: relative;
+  border-block-end: 2px solid black;
+  border-block-start: 2px solid black;
+}
+
+.cards__picture {
+  display: flex;
 }
 
 .decorative-element {
@@ -212,6 +226,33 @@
   }
 }
 
+.cards__dialog-floppy-container{
+  background-color: var(--backgorund-color);
+  padding: 30px 42px;
+  min-width:341px;
+  max-width: 357px;
+}
+
+.dialog-floppy-button{
+  width: 100%;
+  padding-block-start: 12.5px;
+  padding-block-end: 12.5px;
+}
+
+.dialog-floppy-text{
+  color: var(--accent-color);
+  font-family: var(--PressStart2P);
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.cards__dialog-floppy-container-elements{
+  display: flex;
+  gap: 20px;
+  margin-block-end: 30px;
+  align-items: center;
+}
 .theme-menu__button:after {
   content: "";
   display: block;
@@ -250,7 +291,8 @@
   mix-blend-mode: difference;
 }
 
-.button__text {
+
+.button-text {
   position: relative;
   color: var(--difference-colors);
   mix-blend-mode: difference;
@@ -265,24 +307,32 @@
   align-items: center;
   max-width: 312px;
   background-color: transparent;
+  cursor: pointer;
 }
 
-.cards__floppy {
+.cards__floppy-page {
   width: 37px;
   height: 37px;
+}
+
+.floppy{
   position: relative;
   color: var(--difference-colors);
   mix-blend-mode: difference;
 }
 
-.card__like-button:focus,
+.cards__floppy-dialog{
+  width: 110px;
+}
+
+.button-element:focus,
 .cards__floppy-button:focus {
   outline: none;
   box-shadow: 2px 2px var(--accent-color);
   transition: box-shadow var(--transition-time);
 }
 
-.card__like-button::before,
+.button-element::before,
 .cards__floppy-button::before {
   content: "";
   position: absolute;
@@ -294,7 +344,7 @@
   transition: 0.5s ease-in-out;
 }
 
-.card__like-button:hover::before,
+.button-element:hover::before,
 .cards__floppy-button:hover::before {
   width: 100%;
 }
@@ -308,7 +358,7 @@
   transition: fill linear var(--transition-time);
 }
 
-.sparks{
+.sparks {
   opacity: 0;
 }
 
@@ -332,22 +382,22 @@
   transition: fill linear var(--transition-time) 0.05s;
 }
 
-.like-icon.is-liked .core{
+.like-icon.is-liked .core {
   fill: var(--accent-color-heart);
   transition: fill linear var(--transition-time);
 }
 
-.like-icon.is-liked .main-body{
+.like-icon.is-liked .main-body {
   fill: var(--accent-color-heart);
   transition: fill linear var(--transition-time) 0.05s;
 }
 
-.like-icon.is-liked .contour{
+.like-icon.is-liked .contour {
   fill: var(--accent-color-heart);
   transition: fill linear var(--transition-time) 0.06s;
 }
 
-.like-icon.is-liked .heart{
+.like-icon.is-liked .heart {
   animation-name: scale;
   animation-delay: 0.1s;
   animation-duration: var(--transition-time);
@@ -357,8 +407,7 @@
   transform-origin: center;
 }
 
-
-.like-icon.is-liked .sparks{
+.like-icon.is-liked .sparks {
   animation-name: appearance;
   animation-delay: var(--transition-time);
   animation-duration: var(--transition-time);
@@ -366,8 +415,6 @@
   animation-iteration-count: 2;
   animation-direction: alternate;
 }
-
-
 
 /*.......................................................................................................................*/
 @keyframes left-right-moving {
@@ -379,59 +426,61 @@
   }
 }
 
-@keyframes scale{
-  0%{
+@keyframes scale {
+  0% {
     transform: scale(1);
   }
-  100%{
+  100% {
     transform: scale(1.5);
   }
 }
 
-@keyframes appearance{
-  0%{
+@keyframes appearance {
+  0% {
     opacity: 0;
   }
 
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-@media (min-width: 375px) {
-  .header__title {
-    font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+@media (min-width: 376px) {
+  .cards__paragraph {
+    max-width: 646px;
   }
 }
 
 @media (min-width: 1440px) {
-  .cards__paragraph_padding_small {
-    padding-inline-end: 0;
-  }
-
-  .cards__container-of-interactive-elements {
-    padding-block-start: 1px;
+  .cards__img-container {
+    height: 700px;
+    width: 696px;
   }
 
   .cards__elements-container {
-    padding-inline-end: 20.5px;
-    padding-block-start: 27px;
+    padding-block-start: 28.5px;
+    padding-inline-end: 21px;
+  }
+
+  .cards__subtitle {
+    padding-block-start: 4px;
+    padding-block-end: 2px;
+  }
+
+  .decorative-element {
+    right: 26px;
+    top: 30px;
   }
 
   .cards__floppy-button {
     flex-direction: row;
     max-width: 335px;
+    padding: 12px 18.7px;
+    margin: 53px auto 52px auto;
   }
 
-  .cards__floppy {
+  .cards__floppy-page {
     width: 28px;
     height: 28px;
   }
-
-  .decorative-element {
-    right: 23px;
-    top: 28px;
-  }
 }
-
-
