@@ -111,7 +111,7 @@
                   </svg>
                 </button>
                 <button class="card__like-button button-element">
-                  <span class="button-text">Like</span>
+                  <span class="button__text">Like</span>
                 </button>
               </div>
             </article>
@@ -147,7 +147,7 @@
                 </p>
               </div>
               <div class="cards__container-of-interactive-elements">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg
                     width="39"
                     height="36"
@@ -180,8 +180,8 @@
                     />
                   </svg>
                 </button>
-                <button class="card__like-button button-element">
-                  <span class="button-text">Like</span>
+                <button type="button" class="card__like-button button-element">
+                  <span class="button__text">Like</span>
                 </button>
               </div>
             </article>
@@ -215,7 +215,7 @@
                 </p>
               </div>
               <div class="cards__container-of-interactive-elements">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg
                     width="39"
                     height="36"
@@ -248,8 +248,8 @@
                     />
                   </svg>
                 </button>
-                <button class="card__like-button button-element">
-                  <span class="button-text">Like</span>
+                <button type="button" class="card__like-button button-element">
+                  <span class="button__text">Like</span>
                 </button>
               </div>
             </article>
@@ -284,7 +284,7 @@
                 </p>
               </div>
               <div class="cards__container-of-interactive-elements">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg
                     width="39"
                     height="36"
@@ -317,8 +317,8 @@
                     />
                   </svg>
                 </button>
-                <button class="card__like-button button-element">
-                  <span class="button-text">Like</span>
+                <button type="button" class="card__like-button button-element">
+                  <span class="button__text">Like</span>
                 </button>
               </div>
             </article>
@@ -354,7 +354,7 @@
                 </p>
               </div>
               <div class="cards__container-of-interactive-elements">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg
                     width="39"
                     height="36"
@@ -387,8 +387,8 @@
                     />
                   </svg>
                 </button>
-                <button class="card__like-button button-element">
-                  <span class="button-text">Like</span>
+                <button type="button" class="card__like-button button-element">
+                  <span class="button__text">Like</span>
                 </button>
               </div>
             </article>
@@ -421,7 +421,7 @@
                 </p>
               </div>
               <div class="cards__container-of-interactive-elements">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg
                     width="39"
                     height="36"
@@ -454,8 +454,8 @@
                     />
                   </svg>
                 </button>
-                <button class="card__like-button button-element">
-                  <span class="button-text">Like</span>
+                <button type="button" class="card__like-button button-element">
+                  <span class="button__text">Like</span>
                 </button>
               </div>
             </article>
@@ -490,7 +490,7 @@
                 </p>
               </div>
               <div class="cards__container-of-interactive-elements">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg
                     width="39"
                     height="36"
@@ -523,8 +523,8 @@
                     />
                   </svg>
                 </button>
-                <button class="card__like-button button-element">
-                  <span class="button-text">Like</span>
+                <button type="button" class="card__like-button button-element">
+                  <span class="button__text">Like</span>
                 </button>
               </div>
             </article>
@@ -562,7 +562,7 @@
                 </p>
               </div>
               <div class="cards__container-of-interactive-elements">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg
                     width="39"
                     height="36"
@@ -595,8 +595,8 @@
                     />
                   </svg>
                 </button>
-                <button class="card__like-button button-element">
-                  <span class="button-text">Like</span>
+                <button type="button" class="card__like-button button-element">
+                  <span class="button__text">Like</span>
                 </button>
               </div>
             </article>
@@ -614,18 +614,19 @@
         <span class="cards__floppy-text">Сохранить на память</span>
       </button>
       <dialog id="dialog-floppy" class="cards__dialog-floppy-container">
+        <form>
         <div class="cards__dialog-floppy-container-elements">
           <svg class="floppy cards__floppy-dialog" viewBox="0 0 30 28">
             <use href="./svg/floppy.svg#floppy"></use>
           </svg>
-          <span class="dialog-floppy-text">Вставьте дискету, чтобы продолжить</span>
+          <label class="dialog-floppy-text">Вставьте дискету, чтобы продолжить</label>
         </div>
-        <button class="dialog-floppy-button button-element">
-          <span class="button-text">
+        <button type="submit" class="dialog-floppy-button button-element">
+          <span class="button__text">
             ОК
           </span>
         </button> 
-        
+      </form>
       </dialog>
       </section>
     </main>

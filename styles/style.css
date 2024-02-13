@@ -30,7 +30,7 @@
 }
 
 .header {
-  background-color: antiquewhite;
+  background-color: var(--backgorund-color);
   font-family: var(--PressStart2P);
   margin-block-start: 100px;
   margin-block-end: 102px;
@@ -292,7 +292,7 @@
 }
 
 
-.button-text {
+.button__text {
   position: relative;
   color: var(--difference-colors);
   mix-blend-mode: difference;
@@ -322,7 +322,11 @@
 }
 
 .cards__floppy-dialog{
-  width: 110px;
+  width: 99px;
+}
+
+.cards__dialog-floppy-container::backdrop{
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .button-element:focus,
@@ -482,5 +486,13 @@
   .cards__floppy-page {
     width: 28px;
     height: 28px;
+  }
+
+  .cards__dialog-floppy-container{
+    padding: 30px;
+  }
+
+  .cards__floppy-dialog{
+    width: 87px;
   }
 }
