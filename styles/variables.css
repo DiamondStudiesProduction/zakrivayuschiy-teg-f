@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
-:root{
-  --inter: 'Inter-Variable', 'Inter';
-  --PressStart2P: 'PressStart2P';
+:root {
+  --inter: "Inter-Variable", "Inter";
+  --PressStart2P: "PressStart2P";
   --weight-normal: 400;
   --weight-bold: 700;
   --backgorund-color: white;
@@ -10,5 +10,8 @@
   --opacity: 0.6;
   --transition-time: 0.3s;
   --difference-colors: white;
-  --accent-color-heart:#FF0000;
+  --accent-color-heart: #ff0000;
+  --gradient-horizontal: #d3d3d3;
+  --gradient-saturation-effect-from: #e7e7e7;
+  --gradient-saturation-effect-to: #1a1a1a;
 }

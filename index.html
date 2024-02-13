@@ -603,31 +603,31 @@
           </li>
         </ul>
         <button
-        class="cards__floppy-button"
-        type="button"
-        onclick="window['dialog-floppy'].showModal()"
-        aria-controls="dialog-floppy"
-      >
-        <svg class="cards__floppy-page floppy" viewBox="0 0 36 36">
-          <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
-        <span class="cards__floppy-text">Сохранить на память</span>
-      </button>
-      <dialog id="dialog-floppy" class="cards__dialog-floppy-container">
-        <form>
-        <div class="cards__dialog-floppy-container-elements">
-          <svg class="floppy cards__floppy-dialog" viewBox="0 0 30 28">
+          class="cards__floppy-button"
+          type="button"
+          onclick="window['dialog-floppy'].showModal()"
+          aria-controls="dialog-floppy"
+        >
+          <svg class="cards__floppy-page floppy" viewBox="0 0 36 36">
             <use href="./svg/floppy.svg#floppy"></use>
           </svg>
-          <label class="dialog-floppy-text">Вставьте дискету, чтобы продолжить</label>
-        </div>
-        <button type="submit" class="dialog-floppy-button button-element">
-          <span class="button__text">
-            ОК
-          </span>
-        </button> 
-      </form>
-      </dialog>
+          <span class="cards__floppy-text">Сохранить на память</span>
+        </button>
+        <dialog id="dialog-floppy" class="cards__dialog-floppy-container">
+          <form>
+            <div class="cards__dialog-floppy-container-elements">
+              <svg class="floppy cards__floppy-dialog" viewBox="0 0 30 28">
+                <use href="./svg/floppy.svg#floppy"></use>
+              </svg>
+              <label class="dialog-floppy-text"
+                >Вставьте дискету, чтобы продолжить</label
+              >
+            </div>
+            <button type="submit" class="dialog-floppy-button button-element">
+              <span class="button__text"> ОК </span>
+            </button>
+          </form>
+        </dialog>
       </section>
     </main>
     <script src="./scripts/like.js"></script>
