@@ -9,8 +9,22 @@
 @font-face {
   font-display: swap;
   font-family: "Inter";
-  src: local("Roboto-Flex-Variable"),
+  src: local("Inter"),
     url("./Inter-Variable.woff2") format("woff2 supports variations"),
     url("./Inter-Variable.woff2") format("woff2-variations");
   font-weight: 400 785;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  src: local("Inter"), url("./Inter-Variable.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  src: local("Inter"), url("./Inter-Variable.woff2") format("woff2");
+  font-weight: 700;
 }
