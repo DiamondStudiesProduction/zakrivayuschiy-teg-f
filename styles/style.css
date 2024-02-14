@@ -16,7 +16,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-weight: var(--weight-normal);
+  font-variation-settings: "wght" var(--weight-normal);
   background-color: var(--backgorund-color);
   background-image: repeating-linear-gradient(
       var(--gradient-horizontal) 0 2px,
@@ -52,10 +52,8 @@
   font-family: var(--PressStart2P);
   margin-block-start: 100px;
   margin-block-end: 102px;
-  padding-block-start: 9.5%;
-  padding-block-end: 14px;
-  min-block-size: 325px;
-  max-block-size: 364px;
+  padding-block-start: 31.5%;
+  padding-block-end: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,7 +64,7 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 6px;
   padding-left: 20px;
 }
 
@@ -90,6 +88,10 @@
   border: none;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.theme-menu__button:focus-visible {
+  outline: none;
 }
 
 .theme-menu__button:disabled:before {
@@ -157,7 +159,7 @@
 
 .cards__subtitle {
   font-family: inherit;
-  font-weight: var(--weight-bold);
+  font-variation-settings: "wght" var(--weight-bold);
   font-size: 18px;
   line-height: 21.78px;
   padding: 3.5px 10px 5.5px 10px;
@@ -168,16 +170,17 @@
   font-weight: inherit;
   font-size: 18px;
   line-height: 21px;
-  max-inline-size: 320px;
+  max-inline-size: 321.1px;
 }
 
 .card__like-button {
+  width: 130px;
   padding: 10px 36px;
+  background-color: transparent;
 }
 
 .button-element {
   position: relative;
-  background-color: transparent;
   font-family: var(--PressStart2P);
   font-size: 14px;
   cursor: pointer;
@@ -233,12 +236,8 @@
   mix-blend-mode: hard-light;
 }
 
-@supports (
-  (text-stroke: 1px var(--backgorund-color)) or
-    (-webkit-text-stroke: 1px var(--backgorund-color))
-) {
+@supports ((-webkit-text-stroke: 0.5px var(--backgorund-color))) {
   .decorative-element {
-    text-stroke: 1px var(--backgorund-color);
     -webkit-text-stroke: 0.5px var(--backgorund-color);
     text-shadow: none;
   }
@@ -248,14 +247,16 @@
   background-color: var(--backgorund-color);
   padding: 30px 42px;
   min-inline-size: 341px;
-  max-inline-size: 357px;
   border: 2px solid var(--accent-color);
 }
 
 .dialog-floppy-button {
   inline-size: 100%;
-  padding-block-start: 12.5px;
-  padding-block-end: 12.5px;
+  padding-block-start: 10.5px;
+  padding-block-end: 10.5px;
+  background-color: transparent;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .dialog-floppy-text {
@@ -272,6 +273,13 @@
   margin-block-end: 30px;
   align-items: center;
 }
+
+.cards__form-floppy {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  row-gap: 30px;
+}
+
 .theme-menu__button:after {
   content: "";
   display: block;
@@ -281,7 +289,8 @@
   transition: inline-size var(--transition-time) ease;
 }
 
-.theme-menu__button:hover:enabled::after {
+.theme-menu__button:hover:enabled::after,
+.theme-menu__button:focus-visible::after {
   inline-size: 100%;
   background-color: var(--accent-color);
   opacity: var(--opacity);
@@ -321,15 +330,12 @@
   mix-blend-mode: difference;
 }
 .cards__floppy-button {
-  position: relative;
-  border: 2px solid var(--accent-color);
-  margin: 49px auto 52px auto;
+  margin: 52px auto 105px auto;
   padding: 15px 18.7px;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-inline-size: 312px;
-  cursor: pointer;
   background-color: var(--backgorund-color);
 }
 
@@ -345,11 +351,12 @@
 }
 
 .cards__floppy-dialog {
-  inline-size: 99px;
+  inline-size: 42px;
+  align-self: center;
 }
 
 .cards__dialog-floppy-container::backdrop {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 75%);
 }
 
 .button-element:focus,
@@ -392,15 +399,22 @@
 /*.......................................................................................................................*/
 
 @media (min-width: 376px) {
+  .header {
+    padding-block-start: 9.5%;
+  }
   .cards__paragraph {
-    max-width: 646px;
+    max-inline-size: 646px;
+  }
+
+  .cards__dialog-floppy-container {
+    max-inline-size: 357px;
   }
 }
 
 @media (min-width: 1440px) {
   .cards__img-container {
     block-size: 700px;
-    width: 696px;
+    inline-size: 696px;
   }
 
   .cards__elements-container {
@@ -432,9 +446,5 @@
 
   .cards__dialog-floppy-container {
     padding: 30px;
-  }
-
-  .cards__floppy-dialog {
-    inline-size: 87px;
   }
 }

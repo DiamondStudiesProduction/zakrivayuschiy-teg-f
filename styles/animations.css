@@ -48,22 +48,18 @@
 }
 
 .like-icon.is-liked .heart {
-  animation-name: scale;
+  animation-name: increaseInSize;
   animation-delay: 0.1s;
   animation-duration: var(--transition-time);
   animation-timing-function: ease-in;
-  animation-direction: alternate;
-  animation-iteration-count: 2;
   transform-origin: center;
 }
 
 .like-icon.is-liked .sparks {
-  animation-name: appearance;
+  animation-name: fadeIn;
   animation-delay: var(--transition-time);
   animation-duration: var(--transition-time);
   animation-timing-function: ease-in;
-  animation-iteration-count: 2;
-  animation-direction: alternate;
 }
 
 @keyframes left-right-moving {
@@ -75,7 +71,7 @@
   }
 }
 
-@keyframes scale {
+@keyframes increaseInSize {
   0% {
     transform: scale(1);
   }
@@ -84,7 +80,7 @@
   }
 }
 
-@keyframes appearance {
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }
