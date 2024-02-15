@@ -191,22 +191,20 @@
 .card__icon-button {
   background-color: transparent;
   border: none;
-  block-size: 34px;
+  block-size: 38px;
   cursor: pointer;
 }
-
+.card__icon-button:focus {
+  outline: none;
+}
 .card__icon-button:focus-visible {
   outline: 2px solid var(--accent-color);
   transition: outline var(--transition-time) ease;
 }
 
-.card__icon-button:focus {
-  outline: none;
-}
-
 .cards__container-of-interactive-elements {
   display: flex;
-  padding: 0 25px 25px 25px;
+  padding: 0 25px 24px 25px;
   justify-content: end;
 }
 
@@ -290,7 +288,6 @@
   transition: inline-size var(--transition-time) ease;
 }
 
-.theme-menu__button:hover:enabled::after,
 .theme-menu__button:focus-visible::after {
   inline-size: 100%;
   background-color: var(--accent-color);
@@ -331,7 +328,7 @@
   mix-blend-mode: difference;
 }
 .cards__floppy-button {
-  margin: 52px auto 105px auto;
+  margin: 52px auto 100px auto;
   padding: 15px 18.7px;
   display: flex;
   flex-direction: column;
@@ -437,7 +434,7 @@
     flex-direction: row;
     max-inline-size: 335px;
     padding: 12px 18.7px;
-    margin: 53px auto 52px auto;
+    margin-block-end: 103px;
   }
 
   .cards__floppy-page {
